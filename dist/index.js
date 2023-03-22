@@ -118,18 +118,18 @@
 
 // Quick & Dirty
 
-const list = document.querySelector('ul');
+// const list = document.querySelector('ul');
 
-const createItem = (item) => {
-	const li = document.createElement('li');
-	li.innerHTML = `${item} 
-    <button class="remove-item btn-link text-red">
- 	    <i class="fa-solid fa-xmark"></i>
-    </button>`;
-	list.appendChild(li);
-};
+// const createItem = (item) => {
+// 	const li = document.createElement('li');
+// 	li.innerHTML = `${item}
+//     <button class="remove-item btn-link text-red">
+//  	    <i class="fa-solid fa-xmark"></i>
+//     </button>`;
+// 	list.appendChild(li);
+// };
 
-createItem('Bananas');
+// createItem('Bananas');
 
 // Apples
 // <button class="remove-item btn-link text-red">
@@ -138,28 +138,78 @@ createItem('Bananas');
 
 // Performant & Clean
 
-const createItemTwo = (item) => {
-	const li = document.createElement('li');
-	const itemText = document.createTextNode(item);
-	li.appendChild(itemText);
-	button = createButton('remove-item btn-link text-red');
-	li.appendChild(button);
-	list.appendChild(li);
+// const createItemTwo = (item) => {
+// 	const li = document.createElement('li');
+// 	const itemText = document.createTextNode(item);
+// 	li.appendChild(itemText);
+// 	button = createButton('remove-item btn-link text-red');
+// 	li.appendChild(button);
+// 	list.appendChild(li);
+// };
+
+// const createButton = (classes) => {
+// 	const button = document.createElement('button');
+// 	button.className = classes;
+// 	icon = createIcon('fa-solid fa-xmark');
+// 	button.appendChild(icon);
+// 	return button;
+// };
+
+// const createIcon = (classes) => {
+// 	const icon = document.createElement('i');
+// 	icon.className = classes;
+// 	return icon;
+// };
+
+// createItemTwo('Pizza');
+
+// ============= 10 Insert Elements ============= //
+
+// const insertElement = () => {
+// 	const filter = document.querySelector('.filter');
+// 	const h1 = document.createElement('h1');
+// 	const h1Text = document.createTextNode('nsertAdjecentElement');
+// 	h1.appendChild(h1Text);
+// 	filter.insertAdjacentElement('afterend', h1);
+// };
+
+// insertElement();
+
+// const insertText = () => {
+// 	const item = document.querySelector('li');
+// 	item.insertAdjacentText('afterend', 'insertAdjecentText');
+// };
+
+// insertText();
+
+// const insertHTML = () => {
+// 	const clearBtn = document.querySelector('#clear');
+// 	clearBtn.insertAdjacentHTML('beforebegin', '<h2>insertAdjecentHTML</h2>');
+// };
+
+// insertHTML();
+
+// const insertBeforeItem = () => {
+// 	const ul = document.querySelector('ul');
+// 	const li = document.createElement('li');
+// 	const liText = document.createTextNode('insertBefore');
+// 	li.appendChild(liText);
+// 	const thirdItem = ul.querySelector('li:nth-child(3)');
+// 	ul.insertBefore(li, thirdItem);
+// };
+
+// insertBeforeItem();
+
+// ============= 11 Custom Insert After ============= //
+
+const insertAftre = (newEl, existingEl) => {
+	existingEl.parentElement.insertBefore(newEl, existingEl.nextSibling);
 };
 
-const createButton = (classes) => {
-	const button = document.createElement('button');
-	button.className = classes;
-	icon = createIcon('fa-solid fa-xmark');
-	button.appendChild(icon);
+const li = document.createElement('li');
+const liText = document.createTextNode('Insert Me After!');
+li.appendChild(liText);
 
-	return button;
-};
+const firstItem = document.querySelector('li:first-child');
 
-const createIcon = (classes) => {
-	const icon = document.createElement('i');
-	icon.className = classes;
-	return icon;
-};
-
-createItemTwo('Pizza');
+insertAftre(li, firstItem);
