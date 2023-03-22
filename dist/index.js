@@ -202,14 +202,76 @@
 
 // ============= 11 Custom Insert After ============= //
 
-const insertAftre = (newEl, existingEl) => {
-	existingEl.parentElement.insertBefore(newEl, existingEl.nextSibling);
-};
+// const insertAftre = (newEl, existingEl) => {
+// 	existingEl.parentElement.insertBefore(newEl, existingEl.nextSibling);
+// };
 
-const li = document.createElement('li');
-const liText = document.createTextNode('Insert Me After!');
-li.appendChild(liText);
+// const li = document.createElement('li');
+// const liText = document.createTextNode('Insert Me After!');
+// li.appendChild(liText);
 
-const firstItem = document.querySelector('li:first-child');
+// const firstItem = document.querySelector('li:first-child');
 
-insertAftre(li, firstItem);
+// insertAftre(li, firstItem);
+
+// ============= 12 Replace Elements ============= //
+
+// const replaceFirstItem = () => {
+// 	const firstItem = document.querySelector('li');
+// 	const li = document.createElement('li');
+// 	const liText = document.createTextNode('Replaced First');
+// 	li.appendChild(liText);
+// 	firstItem.replaceWith(li);
+// };
+
+// replaceFirstItem();
+
+// const replaceSecondItem = () => {
+// 	const secondItem = document.querySelector('li:nth-child(2)');
+// 	secondItem.outerHTML = '<li>Replaced Second</li>';
+// };
+
+// replaceSecondItem();
+
+// const replaceAllItems = () => {
+// 	const lis = document.querySelectorAll('li');
+// 	lis.forEach((item, index) => (item.innerHTML = index === 1 ? (item.innerHTML = 'Second Item') : 'Replace All'));
+// };
+
+// replaceAllItems();
+
+// const replaceChildHeading = () => {
+// 	const header = document.querySelector('header');
+// 	const h1 = document.querySelector('h1');
+// 	const h2 = document.createElement('h2');
+// 	h2.id = 'app-title';
+// 	h2.innerText = 'Shopping List';
+// 	header.replaceChild(h2, h1);
+// };
+
+// replaceChildHeading();
+
+// ============= 13 Remove Elements ============= //
+
+// const removeClearButton = () => {
+// 	const clearBtn = document.querySelector('#clear');
+// 	clearBtn.remove();
+// };
+
+// removeClearButton();
+
+// const removeFirstItem = () => {
+//     const ul = document.querySelector('ul');
+//     const li = document.querySelector('li');
+//     ul.removeChild(li);
+// }
+
+// removeFirstItem();
+
+// const removeItem = (itemNumber) => {
+// 	const ul = document.querySelector('ul');
+// 	const li = document.querySelector(`li:nth-child(${itemNumber})`);
+// 	ul.removeChild(li);
+// };
+
+// removeItem(1);
